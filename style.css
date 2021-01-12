@@ -1,0 +1,256 @@
+/* ------ CSS3 - Bubble Popping Buttons ------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    /*
+    background: linear-gradient(#4d71a5, #0a2449, #010710);
+    */
+    background-color: #cbe1ec;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%2334abeb' fill-opacity='0.26' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+h1 {
+    font-family: 'Londrina Shadow', cursive; /* font-family: 'Londrina Shadow', cursive; | font-family: 'Londrina Outline', cursive;  */
+    font-size: 3.5rem;
+    color: #34abeb;
+    text-align: center;
+    margin: 70px;
+}
+.container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 100px auto;
+}
+.button {
+    width: 220px; /* width: 160px; */
+    height: 80px; /* height: 60px; */
+    background-color: rgba(52, 172, 237, 1); /* rgba(52, 172, 237, .5); */ 
+    position: relative;
+    left: 15%;
+    border: 3px solid #d8eefc;
+    margin-bottom: 30px;
+}
+.button p {
+    width: 216px;
+    height: 74px;
+    color: #d8eefc;
+    background-color: rgba(52, 172, 237, 1);
+    line-height: 60px;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 25px;
+    position: relative;
+    z-index: 10;
+    font-weight: 900;
+}
+.button figure {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(52, 172, 237, 1);
+    border-radius: 50%;
+    border: 3px solid #d8eefc;
+    z-index: 1;
+    transition-delay: 0;
+}
+.button figure:nth-of-type(2) {
+    transition-delay: 1.2s;
+}
+.button figure:nth-of-type(3) {
+    transition-delay: .6s;
+}
+.button figure:nth-of-type(4) {
+    transition-delay: .2s;
+}
+/* ------ Top left corner bubble ------  */
+.button:hover figure:nth-of-type(1) { 
+    top: 5px;
+    left: -10px;
+    width: 50px;
+    height: 50px;
+    transition: .5s ease-out;
+}
+  
+/* ------ Bottom right floating bubble ------  */
+.button:hover figure:nth-of-type(2) {
+    top: 75px;
+    left: 245px;
+    width: 20px;
+    height: 20px;
+    transition: 1.2s ease-out;
+}
+
+/* ------ Top right corner bubble ------  */
+.button:hover figure:nth-of-type(3) {
+    top: -10px;
+    left: 225px;
+    width: 80px;
+    height: 80px;
+    transition: .8s ease-out;
+}
+
+/* ------ Top left floating bubble ------  */
+.button:hover figure:nth-of-type(4) {
+    top: -20px;
+    left: 55px;
+    width: 15px;
+    height: 15px;
+    transition: .2s ease-out;
+}
+
+
+/* ------ SECONDARY BUBBLES ------ */
+
+
+/* ------ Top left corner bubble ------  */
+.button:nth-of-type(2n):hover figure:nth-of-type(1) { 
+    top: -5px;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+    transition: .3s ease-out;
+}
+
+/* ------ Bottom left corner bubble ------  */
+.button:nth-of-type(2n):hover figure:nth-of-type(2) {
+    top: 80px;
+    left: -30px;
+    width: 40px;
+    height: 40px;
+    transition: .6s ease-out;
+}
+
+/* ------ Bottom right corner bubble ------  */
+.button:nth-of-type(2n):hover figure:nth-of-type(3) {
+    top: 75px;
+    left: 220px;
+    width: 40px;
+    height: 40px;
+    transition: .4s ease-out;
+}
+
+/* ------ Bottom left floating bubble ------  */
+.button:nth-of-type(2n):hover figure:nth-of-type(4) {
+    top: 90px;
+    left: 25px;
+    width: 10px;
+    height: 10px;
+    transition: .5s ease-out;
+}
+
+.button:not(:hover) figure {
+    animation: pop 2s;
+}
+@keyframes pop {
+    0% {transform: scale(1) translate(-50%, -50%);}
+    100% {transform: scale(1.5) translate(-50%, -50%);}
+}
+.button span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    transition: 1s;
+}
+.button:hover span {
+    transform: translate(-50%, -50%) rotate(-3deg);
+    font-size: 35px;
+    color: white;
+}
+/*--------------- Responsive transition (0) 375px -----------*/
+@media screen and (min-width: 375px) {
+    .button {
+        width: 220px; /* width: 160px; */
+        height: 80px; /* height: 60px; */
+        background-color: rgba(52, 172, 237, 1); /* rgba(52, 172, 237, .5); */ 
+        position: relative;
+        left: 22%;
+        border: 3px solid #d8eefc;
+        margin-bottom: 30px;
+    }
+}
+/*--------------- Responsive transition (0) 425px -----------*/
+@media screen and (min-width: 425px) {
+    .button {
+        width: 220px; /* width: 160px; */
+        height: 80px; /* height: 60px; */
+        background-color: rgba(52, 172, 237, 1); /* rgba(52, 172, 237, .5); */ 
+        position: relative;
+        left: 25%;
+        border: 3px solid #d8eefc;
+        margin-bottom: 30px;
+    }
+}
+/*--------------- Responsive transition (1) 600px -----------*/
+@media screen and (min-width: 600px) {
+    .button {
+        width: 220px; /* width: 160px; */
+        height: 80px; /* height: 60px; */
+        background-color: rgba(52, 172, 237, 1); /* rgba(52, 172, 237, .5); */ 
+        position: relative;
+        left: 20%;
+        border: 3px solid #d8eefc;
+        margin-bottom: 30px;
+    }
+}
+
+/*--------------- Responsive transition (2) 768px -----------*/
+@media screen and (min-width: 768px) {
+    .button {
+        width: 220px; /* width: 160px; */
+        height: 80px; /* height: 60px; */
+        background-color: rgba(52, 172, 237, 1); /* rgba(52, 172, 237, .5); */ 
+        position: relative;
+        left: 33%;
+        border: 3px solid #d8eefc;
+        margin-bottom: 30px;
+    }               
+}
+/*--------------- Responsive transition (3) 1024px -----------*/
+@media screen and (min-width: 1024px){
+    .button {
+        width: 220px; /* width: 160px; */
+        height: 80px; /* height: 60px; */
+        background-color: rgba(52, 172, 237, 1); /* rgba(52, 172, 237, .5); */ 
+        position: relative;
+        left: 37%;
+        border: 3px solid #d8eefc;
+        margin-bottom: 30px;
+    }
+} 
+
+/*--------------- Responsive transition (4) 1440px -----------*/
+@media screen and (min-width: 1440px) {
+    .button {
+        width: 220px; /* width: 160px; */
+        height: 80px; /* height: 60px; */
+        background-color: rgba(52, 172, 237, 1); /* rgba(52, 172, 237, .5); */ 
+        position: relative;
+        left: 41%;
+        border: 3px solid #d8eefc;
+        margin-bottom: 30px;
+    }
+}
+
+/*--------------- Responsive transition (5) 2560px -----------*/
+@media screen and (min-width: 2560px){
+    .button {
+        width: 220px; /* width: 160px; */
+        height: 80px; /* height: 60px; */
+        background-color: rgba(52, 172, 237, 1); /* rgba(52, 172, 237, .5); */ 
+        position: relative;
+        left: 45%;
+        border: 3px solid #d8eefc;
+        margin-bottom: 30px;
+    }
+} 
+
+
